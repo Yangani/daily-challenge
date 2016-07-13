@@ -8,8 +8,10 @@ function selectionSort(arr) {
 				minIndex = i;
 			}
 		}
-		arr[current] = arr[minIndex]; //Swap
-		arr[minIndex] = temp;
+		if(current != minIndex) {
+			arr[current] = arr[minIndex]; //Swap
+			arr[minIndex] = temp;
+		}
 		current++;
 	}
 	return arr;
