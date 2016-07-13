@@ -1,13 +1,13 @@
 function bubbleSort(arr) {
 	var count = 0;
-	var current, next;
+	var curr, next;
 	while(count < arr.length) {
 		for(var i = 0; i < arr.length; i++) {
 			curr = arr[i];
 			next = arr[i + 1];
-			if(curr > next) {
+			if(curr && next && curr > next) { //validate index and compare values
 				arr[i] = next;
-				arr[i+1] = current;
+				arr[i+1] = curr;
 			}
 		}
 		count++;
