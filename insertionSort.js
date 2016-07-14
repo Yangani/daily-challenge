@@ -8,8 +8,10 @@ function insertionSort(arr) {
 				min = i;
 			}
 		}
-		arr.splice(position, 1);	//Remove the item swapped
-		arr.splice(min, 0, val);    //insert the item in suitable place
+		if(position > min) {
+			arr.splice(position, 1);	//Remove the item swapped
+			arr.splice(min, 0, val);    //insert the item in suitable place
+		}
 		position++;
 	}
 	return arr;
